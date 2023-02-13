@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+li{list-style: none;}
+a{color: #fff; text-decoration: none;}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+body {
+  height: 100vh;
+  background: rgb(0,0,0,0.8) url(img/Cover_anni40-50_1920x800.jpg) no-repeat;
+  background-size: cover;
+  background-blend-mode: hue;
+  /*색과 이미지를 섞는것*/
+}
+
+.wrap{}
+
+/* header */
+header{
+  border-bottom: 1px solid #ddd;
+  height: 100px;
+}
+header .container{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo{width: 150px;}
+header .container .logo a{}
+header .container .logo a img{width: 100%;}
+
+header .container .menu_wrap{}
+header .container .menu_wrap ul{
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  
+}
+header .container .menu_wrap ul li{}
+header .container .menu_wrap ul li a{}
+
+header .container .search{}
+header .container .search a{}
