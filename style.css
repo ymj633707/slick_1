@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+li{list-style: none;}
+a{color: #fff; text-decoration: none;}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+body {
+  height: 100vh;
+  background: rgb(0,0,0,0.8) url(img/Cover_anni40-50_1920x800.jpg) no-repeat;
+  background-size: cover;
+  background-blend-mode: hue;
+  /*색과 이미지를 섞는것*/
+}
+
+.wrap{}
+
+/* header */
+header{
+  border-bottom: 1px solid #ddd;
+  height: 100px;
+}
+header .container{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo{width: 150px;}
+header .container .logo a{}
+header .container .logo a img{width: 100%;}
+
+header .container .menu_wrap{}
+header .container .menu_wrap ul{
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  
+}
+header .container .menu_wrap ul li{}
+header .container .menu_wrap ul li a{}
+
+header .container .search{}
+header .container .search a{}
+header .container .search a i{}
+
+.main{margin-top: 5%;} /*부모의 넓이를 기준하여 5%*/
+.main .slick-slide{
+  display: flex;
+  position: relative;
+}  /* slick-slide 개발자모드로 잡아서 복사해와야함*/
+.left_area {
+  width: 50%;
+  height: 80vh;
+}
+.right_area{
+  width: 50%;
+  height: 80vh;
+  background-color: blue;
+}
+
+.left_area{}
+.left_area .vespa_img{
+  width: 120%;
+  padding-top: 160px; /*평가항목에 정해져있지않음*/
+}
+.main .slick-active .left_area .vespa_img{
+ animation: fadeInL 0.5s 0.5s both;
+}
+/*slick-active : 현재 보고있는 slick에 붙는다*/
+/* 애니메이션이름 진행시간 딜레이시간 both(처음자리에있다가 튕겨서 애니메이션 시작하는걸 방지)*/
+.left_area .vespa_img img{
+  width: 100%;
+}
+
+.left_area .vespa_tit{
+  position: absolute;
+  left: 0;
+  top: 120px;
+  z-index: -1; /*이미지 뒤로 글자가 보이도록*/
+}
+.left_area .vespa_tit h2{
+  font-size: 135px;
+  color: rgba(255,255,255,0.8);
+}
+.left_area .vespa_tit p{
+  font-size: 19px; color: #fff;
+  letter-spacing: 19px; /*자간*/
+}
+
+
+
+
+
+.main .slick-arrow{
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /*버튼 두개다 보이도록*/
+}
+
+/*애니메이션*/
+@keyframes fadeInR{
+  0%{transform: translateX(150%); opacity: 0;}
+  100%{transform: translateX(0%); opacity: 1;}
+}
+@keyframes fadeInL{
+  0%{transform: translateX(-150%); opacity: 0;}
+  100%{transform: translateX(0%); opacity: 1;}
+}
+@keyframes fadeInT{
+  0%{transform: translateY(-150%); opacity: 0;}
+  100%{transform: translateY(0%); opacity: 1;}
+}
+
